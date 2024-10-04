@@ -1,0 +1,26 @@
+<p-dialog header="Editar Usuário" 
+           [(visible)]="display" 
+           [modal]="true" 
+           [style]="dialogStyle" 
+           [closable]="true" 
+           (onHide)="onDialogHide()" 
+           (onShow)="onShowDialog()" 
+           aria-label="Diálogo para editar usuário">
+  <div class="dialog-content">
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="emailUsuario" pInputText placeholder="Digite seu email" required aria-label="Campo para inserir o email do usuário">
+    </div>
+
+    <div class="field">
+      <label for="perfil">Perfil</label>
+      <p-dropdown [options]="perfis" [disabled]="userOn?.permission?.id == 2" [(ngModel)]="selectedPerfil" placeholder="Selecione um perfil" aria-label="Seleção de perfil"></p-dropdown>
+    </div>
+
+    <div class="button-group">
+      <button pButton type="button" label="Cancelar" class="p-button-danger" icon="pi pi-times" (click)="onCancel()" aria-label="Botão para cancelar a edição do usuário"></button>
+      <button pButton type="button" label="Salvar" class="p-button-primary" icon="pi pi-check" (click)="onSave()" aria-label="Botão para salvar as alterações no usuário"></button>
+    </div>
+  </div>
+</p-dialog>

@@ -1,0 +1,26 @@
+<p-dialog header="Editar perfil" (onShow)="onShowDialog()"  [(visible)]="display" [modal]="true" [style]="dialogStyle" [closable]="true" (onHide)="onDialogHide()" aria-label="Diálogo para editar perfil">
+  <div class="dialog-content">
+
+    <div class="field">
+      <label for="perfil">Perfil</label>
+      <p-dropdown [options]="perfis" [(ngModel)]="valuePerfil" (onChange)="onPerfilChange($event)" placeholder="Selecione um perfil" aria-label="Seleção de perfil"></p-dropdown>
+    </div>
+
+    <div class="field-checkbox">
+      <p-checkbox [(ngModel)]="canViewAllProfiles" binary="true" label="Visualizar todos os perfis" aria-label="Opção para visualizar todos os perfis"></p-checkbox>
+    </div>
+    
+    <div class="field-checkbox">
+      <p-checkbox [(ngModel)]="canEditProfiles" binary="true" label="Editar perfis" aria-label="Opção para editar perfis"></p-checkbox>
+    </div>
+    
+    <div class="field-checkbox">
+      <p-checkbox [(ngModel)]="canEditUserProfiles" binary="true" label="Excluir perfis" aria-label="Opção para excluir perfis"></p-checkbox>
+    </div>
+
+    <div class="button-group">
+      <button pButton type="button" label="Cancelar" class="p-button-danger" icon="pi pi-times" (click)="onCancel()" aria-label="Botão para cancelar"></button>
+      <button pButton type="button" label="Salvar" class="p-button-primary" icon="pi pi-check" (click)="onSave()" aria-label="Botão para salvar"></button>
+    </div>
+  </div>
+</p-dialog>

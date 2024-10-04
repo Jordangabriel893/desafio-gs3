@@ -1,0 +1,87 @@
+th, h3, h5, p, td{
+    font-family: Inter;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    .btn-add{
+        padding-right: 15px;
+    }
+}
+
+.p-button{
+    background-color: white;
+    color: black;
+    border: none;
+    
+}
+.card-container{
+    display: none;
+}
+.flex-mobile-container{
+    display: none;
+}
+.user-card{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  
+    margin-bottom: 15px;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+    .info-action{
+        display: flex;
+        justify-content: space-between;
+    }
+    .user-info{
+        width: 80%;
+    }
+    .user-actions{
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        button{
+            padding-top: 22px;
+        }
+    }
+}
+
+@media(max-width:1024px){
+    p-table{
+        display: none;
+    }
+    .card-container{
+        display: block;
+    }
+    .flex-mobile-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        .button-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            p-button{
+                width: 100%;
+                padding-top: 10px;
+                padding-right: 0px;
+            }
+            p-button:nth-child(2){
+                padding-bottom: 15px;
+            }
+        }
+    }
+    
+}
+

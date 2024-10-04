@@ -34,9 +34,13 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/mockServiceWorker.js"
             ],
             "styles": [
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -109,5 +113,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ad5eeba7-748e-4f5d-87ae-2215a692551b"
   }
 }

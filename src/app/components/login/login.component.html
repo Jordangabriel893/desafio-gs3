@@ -1,0 +1,28 @@
+<div class="body">
+  <div class="login-container">
+    <form class="login-form" aria-labelledby="login-title" (ngSubmit)="onSubmit()" #loginForm="ngForm" aria-label="Formulário de login">
+      <h1 id="login-title">GS3</h1>
+      <p>Faça login e comece a usar!</p>
+  
+      <label class="label-input" for="email">Endereço de e-mail</label>
+      <div class="input-group">
+        <i class="pi pi-envelope" aria-hidden="true"></i>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required [(ngModel)]="email" aria-label="Campo de e-mail">
+      </div>
+  
+      <label class="label-input" for="password">Sua senha</label>
+      <div class="input-group">
+        <i class="pi pi-lock" aria-hidden="true"></i>
+        <input type="password" id="password" name="password" placeholder="Sua senha" required [(ngModel)]="password" aria-label="Campo de senha">
+      </div>
+  
+      <button type="submit" class="submit-button" aria-label="Botão para entrar na plataforma">Entrar na plataforma</button>
+  
+      <div class="login-footer">
+        <a class="forgot-password" aria-label="Link para recuperar a senha">Esqueceu sua senha?</a>
+        <a class="create-account" aria-label="Link para criar uma nova conta">Não possui conta? Crie uma agora!</a>
+      </div>
+    </form>
+  </div>
+</div>
+<p-toast aria-label="Mensagens do sistema"></p-toast>
