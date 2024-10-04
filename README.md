@@ -54,8 +54,23 @@ Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
 ng serve
 ```
 
+## Usuários da aplicação
+Para acessar a aplicação, segue os perfis abaixo:
 
+### Administrador
 
+Usuário: admin@admin.com.br
+Senha: 12345678
+
+### Usuário
+
+Usuário: paulo@user.com.br
+Senha: 43215678
+
+Usuário: jordan@teste.com.br
+Senha: 67891234
+
+Para novos usuários sempre será gerada a seguinte senha: 12345678
 
 
 
